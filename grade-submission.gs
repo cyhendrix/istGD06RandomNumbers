@@ -1,6 +1,16 @@
 const TRACKER_ID = '1IwfPam3I-o4cFu09R9Z6U86RK59LF96ZZjlEqArPAoM';
 const LAB_ORIGIN = 'https://cyhendrix.github.io';
 const LABS = {
+  "Lesson 25: Functions": {"terms": ["Function", "Function definition", "Function call", "Function body", "Abstraction", "Refactoring"], "apply": [1, 0, 2, 1], "debug": [0, 1, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 23: Collisions": {"terms": ["displace()", "collide()", "bounce()", "bounceOff()", "Collider", "Abstraction"], "apply": [0, 1, 2, 0], "debug": [0, 1, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 22: Complex Sprite Movement": {"terms": ["Acceleration", "Counter pattern", "Simulated gravity", "Jump", "Vertical velocity", "Combining patterns"], "apply": [0, 1, 2, 0], "debug": [0, 1, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 20: Collision Detection": {"terms": ["isTouching()", "Collider", "sprite.debug", "Overlap", "Boolean result", "Abstraction"], "apply": [1, 0, 2, 1], "debug": [0, 2, 1, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 19: Velocity": {"terms": ["Velocity", "sprite.velocityX", "sprite.velocityY", "sprite.rotationSpeed", "Zero velocity", "Abstraction"], "apply": [1, 0, 2, 1], "debug": [0, 1, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 17: Mouse Input": {"terms": ["mouseDown()", "mouseWentDown()", "mouseWentUp()", "mouseDidMove()", "else branch", "sprite.visible"], "apply": [0, 1, 2, 0], "debug": [0, 1, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 16: Keyboard Input": {"terms": ["Keyboard input", "keyDown()", "Key name", "Input condition", "Input response", "Continuous control"], "apply": [1, 0, 2, 1], "debug": [0, 1, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 15: Conditionals": {"terms": ["Boolean expression", "Condition", "if statement", "Comparison operator", "Equality comparison (==)", "Assignment (=)"], "apply": [1, 2, 0, 1], "debug": [0, 2, 1, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 13: Sprite Movement": {"terms": ["Counter pattern", "Horizontal movement", "Vertical movement", "Increment", "Decrement", "Rotation update"], "apply": [1, 0, 2, 1], "debug": [0, 2, 0, 1], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
+  "Lesson 12: The Draw Loop": {"terms": ["Draw loop", "Frame", "Frame rate", "Setup code", "background()", "Repeated code"], "apply": [1, 2, 0, 1], "debug": [1, 2, 0, 1], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
   "Lesson 10: Text": {"terms": ["String", "text()", "textSize()", "Text position", "fill()", "Drawing order"], "apply": [0, 1, 2, 0], "debug": [0, 1, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
   "Lesson 09: Sprite Properties": {"terms": ["Property", "Dot notation", "sprite.x", "sprite.y", "sprite.scale", "sprite.rotation"], "apply": [0, 1, 2, 0], "debug": [1, 0, 1, 2], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
   "Lesson 08: Sprites": {"terms": ["Sprite", "createSprite()", "setAnimation()", "drawSprites()", "Animation Tab", "Animation label"], "apply": [1, 0, 2, 1], "debug": [1, 0, 2, 0], "total": 17, "orders": [[0, 1, 2, 3], [0, 1, 2, 3], [0, 1, 2, 3]]},
@@ -33,7 +43,7 @@ const LABS = {
 
 function doGet() {
   return ContentService.createTextOutput(JSON.stringify({
-    ok: true, service: 'Game Design Grade Submission', lessons: [1,2,3,4,5,6,8,9,10]
+    ok: true, service: 'Game Design Grade Submission', lessons: [1,2,3,4,5,6,8,9,10,12,13,15,16,17,19,20,22,23,25]
   })).setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -183,4 +193,5 @@ function doPost(e) {
     '<script>window.top.postMessage(' + safe + ', ' + JSON.stringify(LAB_ORIGIN) + ');</script>'
   ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
+
 
